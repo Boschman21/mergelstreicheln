@@ -25,7 +25,7 @@ const client = new Discord.Client({
 require('dotenv').config();
 
 const ip = process.env.IP;
-const port = process.env.PORT || 25565;
+const port = 25565;
 
 resetStatus()
 
@@ -142,17 +142,17 @@ function updateStatus() {
         if (maintenanceMode === true) {
             const Embed = new Discord.MessageEmbed()
             .setColor(config.maintenancemode.colour)
-            .setTitle(config.servername + ' Server Status!')
+            .setTitle(config.servername + ' Server Status: Wartungspause!')
             .setURL(config.website)
             .setAuthor(config.servername, config.youricon, config.website)
             .setDescription(config.maintenancemode.description)
             .setThumbnail(config.youricon)
             .addFields(
                 { name: config.maintenancemode.fieldName, value: config.maintenancemode.fieldValue },
-                { name: 'Ammout of online players:', value: currentPlayers },
-                { name: 'Connection IP:', value: config.displayip },
-                { name: 'Connection Port:', value: process.env.PORT },
-                { name: 'Message/Reason:', value: customMessage || 'No current messages.'}
+                { name: 'Spieler online:', value: currentPlayers },
+                { name: 'Server IP (neu ab 1.9.22):', value: config.displayip },
+                { name: 'Server Port:', value: '25565' },
+                { name: 'Aktueller Status:', value: customMessage || '🟡 Server wird gerade gewartet.'}
             )
             .setTimestamp()
             .setFooter(config.maintenancemode.footer, config.youricon);
@@ -160,16 +160,16 @@ function updateStatus() {
         } else if (currentlyOnline === true) {
             const Embed = new Discord.MessageEmbed()
             .setColor(config.online.colour)
-            .setTitle(config.servername + ' Server Status!')
+            .setTitle(config.servername + ' Server Status: Online!')
             .setURL(config.website)
             .setAuthor(config.servername, config.youricon, config.website)
             .setDescription(config.online.description)
             .setThumbnail(config.youricon)
             .addFields(
-                { name: 'Ammout of online players:', value: currentPlayers },
-                { name: 'Connection IP:', value: config.displayip },
-                { name: 'Connection Port:', value: process.env.PORT },
-                { name: 'Message/s:', value: customMessage || 'No current messages.'}
+                { name: 'Spieler online:', value: currentPlayers },
+                { name: 'Server IP (neu ab 1.9.22):', value: config.displayip },
+                { name: 'Server Port:', value: '25565' },
+                { name: 'Aktueller Status:', value: customMessage || '🟢 Server ist online. Neustart um 18 Uhr.'}
             )
             .setTimestamp()
             .setFooter(config.online.footer, config.youricon);
@@ -177,15 +177,15 @@ function updateStatus() {
         } else {
             const Embed = new Discord.MessageEmbed()
             .setColor(config.offline.colour)
-            .setTitle(config.servername + ' Server Status!')
+            .setTitle(config.servername + ' Server Status: Offline!')
             .setURL(config.website)
             .setAuthor(config.servername, config.youricon, config.website)
             .setDescription(config.offline.description)
             .setThumbnail(config.youricon)
             .addFields(
-                { name: 'Connection IP:', value: config.displayip },
-                { name: 'Connection Port:', value: process.env.PORT },
-                { name: 'Message/Reason:', value: customMessage || 'No current messages.'}
+                { name: 'Server IP (neu ab 1.9.22):', value: config.displayip },
+                { name: 'Server Port:', value: '25565' },
+                { name: 'Aktueller Status:', value: customMessage || '🔴 Server ist nicht erreichbar.'}
             )
             .setTimestamp()
             .setFooter(config.offline.footer, config.youricon);

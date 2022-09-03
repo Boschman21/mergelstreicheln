@@ -1,42 +1,42 @@
 {
-    "displayip": "172.104.157.152",
-    "servername": "YourCommunityName",
-    "youricon": "https://imgur.com/a/RYfMEVY",
-    "website": "https://www.google.com/",
+    "displayip": "85.214.77.127",
+    "servername": "",
+    "youricon": "https://i.ibb.co/wpgtDFw/media-media-65f9f66b-4a1f-4916-9abd-8a3996740269-original1024.jpg",
+    "website": "https://www.youtube.com/watch?v=yCj5-lsTIUU",
     "UpdateIntervalEmbed": "30s",
     "UpdateIntervalAPIChecking": "30s",
     "guildid": "974692303975370774",
     "maintenancemode": {
         "colour": "#FFA500",
-        "description": "SomeDescription",
+        "description": "Verbindungsinfos (nur mit Whitelist!)",
         "fieldName": "FieldName",
         "fieldValue": "FieldDescription",
-        "footer": "This message updates every 30 seconds! Some information could be incorrect due to caching reasons!"
+        "footer": "Informationen werden alle 30 Sekunden aktualisiert!"
     },
     "online": {
         "colour": "#00FF00",
-        "description": "SomeDescription",
-        "footer": "This message updates every 30 seconds! Some information could be incorrect due to caching reasons!"
+        "description": "Verbindungsinfos (nur mit Whitelist!)",
+        "footer": "Informationen werden alle 30 Sekunden aktualisiert!"
     },
     "offline": {
         "colour": "#FF0000",
-        "description": "SomeDescription",
-        "footer": "This message updates every 30 seconds! Some information could be incorrect due to caching reasons!"
+        "description": "Verbindungsinfos (nur mit Whitelist!)",
+        "footer": "Informationen werden alle 30 Sekunden aktualisiert!"
     }, 
     "customStatus": {
-        "online": "With {online/max}!",
+        "online": "Spieler online: {online/max}!",
         "onlineType": "PLAYING",
         "onlineStatus": "online",
-        "maintenance": "The Developers!",
+        "maintenance": "Wartungsarbeiten zu!",
         "maintenanceType": "WATCHING",
         "maintenanceStatus": "idle",
-        "offline": "An Offline Server",
-        "offlineType": "WATCHING",
+        "offline": "Server offline!",
+        "offlineType": "PLAYING",
         "offlineStatus": "dnd"
     },
     "commands": {
-        "enableSlashCommands": true,
-        "enableMessageCommands": true,
+        "enableSlashCommands": false,
+        "enableMessageCommands": false,
         "prefix": "!",
         "requiredPermission": "MANAGE_GUILD"
     }
